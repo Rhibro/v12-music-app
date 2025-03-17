@@ -35,14 +35,15 @@ const ArtistCard: FC<Props> = ({ artist, handlePlayTrack }) => {
   const togglePlay = usePlayerStore((state) => state.togglePlay);
   const isPlaying = usePlayerStore((state) => state.isPlaying);
   return (
+    <>
     <section className="max-w-4xl m-auto">
-      <Card>
+      <Card className="rounded-md border-4 border-black bg-colors-customYellow">
         <CardHeader>
-          <CardTitle>{artist.name}</CardTitle>
-          <CardDescription>Popularity: {artist.popularity}</CardDescription>
+          <CardTitle className="text-4xl font-bold">{artist.name}</CardTitle>
+          <CardDescription className="text-xl text-black">Popularity: {artist.popularity}</CardDescription>
         </CardHeader>
         <CardContent className="flex justify-center">
-          <img src={artist.image} alt="artist image" />
+          <img src={artist.image} alt="artist image" className="rounded-md border-4 border-black w-50 h-50"/>
         </CardContent>
 
         <CardContent>
@@ -56,8 +57,7 @@ const ArtistCard: FC<Props> = ({ artist, handlePlayTrack }) => {
                   togglePlay(true);
                   console.log(isPlaying);
                 }}
-                className=" cursor-pointer hover:bg-white/60 hover:text-blue-500"
-              >
+                className=" cursor-pointer hover:bg-white/60 hover:text-blue-500 rounded-md border-4 border-black">
                 <CardHeader>
                   <CardTitle>{track.name}</CardTitle>
                   <img src={track.album.image} alt="Album image" />
@@ -84,8 +84,9 @@ const ArtistCard: FC<Props> = ({ artist, handlePlayTrack }) => {
           </article>
         </CardContent>
       </Card>
-      <PlayerComponent />
     </section>
+    <PlayerComponent />
+    </>
   );
 };
 

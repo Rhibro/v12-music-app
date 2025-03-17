@@ -117,9 +117,9 @@ const PlayerComponent = () => {
   };
 
   return (
-    <div className="player-container p-6 flex justify-center rounded-md border-4 border-black bg-yellow-400 ">
+    <div className="player-container p-6 flex justify-center">
       {currentTrack ? (
-        <div className="flex items-stretch  gap-3 self-center bg-colors-customYellow border-4 border-black rounded-md p-4 w-3/4">
+        <div className="flex items-stretch gap-3 self-center bg-colors-customYellow border-4 border-black rounded-md p-4 w-3/4">
           <img
             src={currentTrack.album.images[0]?.url}
             alt="Album Cover"
