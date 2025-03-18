@@ -62,11 +62,11 @@ const ArtistCard: FC<Props> = ({ artist, handlePlayTrack }) => {
                   <CardTitle>{track.name}</CardTitle>
                   <img src={track.album.image} alt="Album image" />
                 </CardHeader>
-                <CardContent className="text-xs">
-                  <CardDescription className="font-semibold text-sm">
+                <CardContent className="text-black">
+                  {/* <CardDescription className="font-semibold text-sm">
                     Artist: {track.artists.name}
-                  </CardDescription>
-                  <CardDescription className="">
+                  </CardDescription> */}
+                  <CardDescription className="text-black">
                     Album: {track.album.name}
                   </CardDescription>
                   <CardDescription>
