@@ -47,7 +47,7 @@ const ArtistCard: FC<Props> = ({ artist, handlePlayTrack }) => {
         </CardContent>
 
         <CardContent>
-          <article className="grid md:grid-cols-4 grid-cols-2 gap-3 justify-center items-center">
+          <article className="flex flex-col gap-3 justify-center items-center">
             {artist.topTracks.map((track) => (
               <Card
                 onClick={() => {
@@ -57,28 +57,28 @@ const ArtistCard: FC<Props> = ({ artist, handlePlayTrack }) => {
                   togglePlay(true);
                   console.log(isPlaying);
                 }}
-                className=" cursor-pointer hover:bg-white/60 hover:text-blue-500 rounded-md border-4 border-black">
-                <CardHeader>
+                className=" cursor-pointer hover:bg-white/60 hover:text-blue-500 rounded-md border-4 border-black max-h-40 flex-wrap flex w-3/4">
+                <CardHeader className="flex flex-col gap-3 justify-center items-center">
                   <CardTitle>{track.name}</CardTitle>
-                  <img src={track.album.image} alt="Album image" />
+                  <img src={track.album.image} alt="Album image" className="h-20 w-20" />
                 </CardHeader>
-                <CardContent className="text-black">
+                <CardContent className="text-black flex flex-col gap-3 justify-center items-center">
                   {/* <CardDescription className="font-semibold text-sm">
                     Artist: {track.artists.name}
                   </CardDescription> */}
                   <CardDescription className="text-black">
                     Album: {track.album.name}
                   </CardDescription>
-                  <CardDescription>
+                  <CardDescription className="text-black">
                     Release Date: {track.album.release_date}
                   </CardDescription>
-                  <CardDescription>
+                  <CardDescription className="text-black">
                     Duration: {timeConverter(track.duration_ms)}
                   </CardDescription>
-                </CardContent>
-                <CardDescription>
+                <CardDescription className="text-black">
                   <a href={track.uri}>Listen on Spotify</a>
                 </CardDescription>
+                </CardContent>
               </Card>
             ))}
           </article>
