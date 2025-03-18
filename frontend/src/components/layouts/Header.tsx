@@ -29,7 +29,7 @@ const Header: React.FC = () => {
       <h1 className="text-white text-left text-5xl">
         <NavLink
           to="/"
-          className="cursor-pointer hover:opacity-80 transition-opacity duration-200 ease-in-out"
+          className="cursor-pointer hover:text-colors-customGreen transition-opacity duration-200 ease-in-out"
         >
           dara
           <span className="text-pink-500">.</span>
