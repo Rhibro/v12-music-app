@@ -57,25 +57,25 @@ const ArtistCard: FC<Props> = ({ artist, handlePlayTrack }) => {
                   togglePlay(true);
                   console.log(isPlaying);
                 }}
-                className=" cursor-pointer hover:bg-white/60 hover:text-blue-500 rounded-md border-4 border-black max-h-40 flex-wrap flex w-3/4">
+                className=" cursor-pointer hover:bg-colors-customGreen hover:text-blue-500 rounded-md border-4 border-black max-h-40 flex-wrap flex w-3/4 bg-colors-customPink ">
                 <CardHeader className="flex flex-col gap-3 justify-center items-center">
                   <CardTitle>{track.name}</CardTitle>
                   <img src={track.album.image} alt="Album image" className="h-20 w-20" />
                 </CardHeader>
-                <CardContent className="text-black flex flex-col gap-3 justify-center items-center">
+                <CardContent className="text-black flex flex-col gap-3 justify-center items-start">
                   {/* <CardDescription className="font-semibold text-sm">
                     Artist: {track.artists.name}
                   </CardDescription> */}
-                  <CardDescription className="text-black">
+                  <CardDescription className="text-black text-lg font-semibold">
                     Album: {track.album.name}
                   </CardDescription>
-                  <CardDescription className="text-black">
+                  <CardDescription className="text-black font-semibold">
                     Release Date: {track.album.release_date}
                   </CardDescription>
-                  <CardDescription className="text-black">
+                  <CardDescription className="text-black font-semibold">
                     Duration: {timeConverter(track.duration_ms)}
                   </CardDescription>
-                <CardDescription className="text-black">
+                <CardDescription className="text-blackfont-semibold">
                   <a href={track.uri}>Listen on Spotify</a>
                 </CardDescription>
                 </CardContent>
