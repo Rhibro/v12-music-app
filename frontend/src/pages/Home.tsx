@@ -5,6 +5,7 @@ import useAccessStore from "@/store/store";
 import useAuth from "@/helpers/useAuth";
 import SongListContainer from "@/components/ui/SongListContainer";
 import { useEffect } from "react";
+import PlayerComponent from "@/components/PlayerComponent";
 
 export default function Home() {
   // Hämta auth code från URL:en
@@ -36,6 +37,7 @@ export default function Home() {
             <ListContainer />
             <SongListContainer />
           </section>
+          <PlayerComponent />
         </div>
       ) : (
         <div>

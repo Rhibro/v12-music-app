@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    darkMode: ["class"],
+    darkMode: "class",
     content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
   	extend: {
@@ -13,10 +13,26 @@ export default {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
 			  colors: {
-				customYellow: '#EEBB36',
-				customPink: '#EE36C5',
-				customBlue: '#3669EE',
-				customGreen: '#36EE5F',
+				customYellow: {
+					light: '#EEBB36',
+					dark: '#1c1c1c'
+				},
+				customPink: {
+					light: '#EE36C5',
+					dark: '#363636'
+				},
+				customBlue: {
+					light: '#3669EE',
+					dark: '#000000'
+				},
+				customGreen: {
+					light: '#36EE5F',
+					dark: '#414141'
+				},
+				// customYellow: '#EEBB36',
+				// customPink: '#EE36C5',
+				// customBlue: '#3669EE',
+				// customGreen: '#36EE5F',
 			  },
   			card: {
   				DEFAULT: 'hsl(var(--card))',

@@ -123,7 +123,8 @@ const PlayerComponent = () => {
         items-stretch 
         gap-3 
         self-center
-        bg-colors-customYellow 
+        bg-colors-customYellow-light
+        dark:bg-colors-customYellow-dark 
         border-4
         border-black 
         rounded-md 
@@ -140,7 +141,7 @@ const PlayerComponent = () => {
             alt="Album Cover"
             className="rounded-md border-4 border-black w-1/3 self-center object-cover"
           />
-          <div className="rounded-md border-4 border-black w-2/3 p-4 bg-colors-customPink text-left">
+          <div className="rounded-md border-4 border-black w-2/3 p-4 bg-colors-customPink-light dark:bg-colors-customPink-dark text-left">
             <h2 className="text-3xl text-strong">{currentTrack.name}</h2>
             <h3 className="text-2xl">
               {currentTrack.artists.map((artist) => artist.name).join(", ")}

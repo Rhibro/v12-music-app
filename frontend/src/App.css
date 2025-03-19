@@ -10,25 +10,32 @@
   h1 {
     font-weight: 700;
   }
+
+}
+
+:root {
+  --bg-light: #3669EE;
+  --bg-dark: #000000;
 }
 
 body {
-  background-color: #3669ee;
+  background-color: var(--bg-light);
+}
+
+.dark body {
+  background-color: var(--bg-dark);
 }
 
 * {
-  /* background-color: #3669ee; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html,
+/* html,
 body {
-  /* height: 100%; */
   background: #3669ee;
-  /* width: 100%; */
-}
+} */
 
 /* width */
 ::-webkit-scrollbar {
@@ -50,4 +57,18 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #3669ee;
+}
+
+/* Dark Mode Scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #2c2c2c; /* Dark background */
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #505050; /* A purple shade */
+  border: solid rgb(0, 0, 0) 3px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #202020; /* Lighter purple on hover */
 }

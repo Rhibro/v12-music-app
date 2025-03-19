@@ -13,7 +13,7 @@ export default function SongItem({ song }: SongItemProps) {
     window.open(`https://open.spotify.com/track/${song.id}`, "_blank");
   };
   return (
-    <li className="flex items-center gap-4 p-2 m-2 border-4 border-black rounded-md cursor-pointer bg-colors-customPink hover:bg-colors-customBlue"
+    <li className="flex items-center gap-4 p-2 m-2 border-4 border-black rounded-md cursor-pointer bg-colors-customPink-light hover:bg-colors-customBlue-light dark:bg-colors-customPink-dark dark:hover:bg-colors-customBlue-dark"
     onClick={handleClick}>
       
         {song.images.length > 0 && (

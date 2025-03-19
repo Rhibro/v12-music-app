@@ -10,12 +10,12 @@ export default function Login() {
       <div>
         <h1 className="text-white text-center text-8xl">
           dara
-          <span className="text-pink-500">.</span>
+          <span className="text-colors-customPink-light dark:text-colors-customPink-dark">.</span>
         </h1>
       </div>
       <div>
         <button
-          className="border-black border-4 text-green px-8 py-4 bg-colors-customGreen hover:bg-colors-customBlue hover:text-white rounded-md text-3xl font-semibold"
+          className="border-black dark:border-white border-4 text-green px-8 py-4 bg-colors-customGreen-light dark:bg-colors-customGreen-dark hover:bg-colors-customPink-light dark:hover:bg-colors-customBlue-dark hover:text-white rounded-md text-3xl font-semibold"
           onClick={() => window.location.assign(AUTH_URL)}
         >
           Log in with Spotify

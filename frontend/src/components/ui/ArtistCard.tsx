@@ -37,14 +37,17 @@ const ArtistCard: FC<Props> = ({ artist, handlePlayTrack }) => {
   return (
     <>
     <section className="max-w-4xl m-auto sm:m-1 md:m-1 lg:m-auto">
-      <Card className="rounded-md border-4 border-black bg-colors-customYellow">
-        <CardHeader>
-          <CardTitle className="text-4xl font-bold">{artist.name}</CardTitle>
-          <CardDescription className="text-xl text-black">Popularity: {artist.popularity}</CardDescription>
-        </CardHeader>
-        <CardContent className="flex justify-center">
-          <img src={artist.image} alt="artist image" className="rounded-md border-4 border-black w-50 h-50"/>
+      <Card className="rounded-md border-4 border-black dark:border-colors-customPink-dark bg-colors-customYellow-light dark:bg-colors-customYellow-dark">
+      <CardContent className="flex justify-center ">
+          <img src={artist.image} alt="artist image" className="rounded-full border-4 border-black w-96 h-96 mt-8"/>
         </CardContent>
+        <CardHeader>
+          <CardTitle className="text-6xl font-bold">{artist.name}</CardTitle>
+          <CardDescription className="text-xl text-black dark:text-white">Popularity: {artist.popularity}</CardDescription>
+        </CardHeader>
+        {/* <CardContent className="flex justify-center">
+          <img src={artist.image} alt="artist image" className="rounded-full border-4 border-black w-48 h-48"/>
+        </CardContent> */}
 
         <CardContent>
           <article className="flex flex-col gap-3 justify-center items-center">
@@ -57,16 +60,16 @@ const ArtistCard: FC<Props> = ({ artist, handlePlayTrack }) => {
                   togglePlay(true);
                   console.log(isPlaying);
                 }}
-                className=" cursor-pointer hover:bg-colors-customGreen rounded-md border-4 border-black text-start flex-wrap flex md:w-4/5 lg:w-4/5 sm:w-4/5 bg-colors-customPink ">
+                className=" cursor-pointer hover:bg-colors-customGreen-light dark:hover:bg-colors-customBlue-dark rounded-md border-4 border-black text-start flex-wrap flex md:w-4/5 lg:w-4/5 sm:w-4/5 bg-colors-customPink-light dark:bg-colors-customPink-dark ">
                 <CardHeader className="flex flex-col gap-1 justify-center items-center">
                   <img src={track.album.image} alt="Album image" className="h-20 w-20" />
                 </CardHeader>
-                <CardContent className="text-black flex flex-col gap-1 justify-center items-start">
+                <CardContent className="text-black dark:text-white flex flex-col gap-1 justify-center items-start">
                 <CardTitle className="text-lg">{track.name}</CardTitle>
-                  <CardDescription className="text-black font-semibold">
+                  <CardDescription className="text-black dark:text-white font-semibold">
                     Album: {track.album.name}
                   </CardDescription>
-                <CardDescription className="text-blackfont-semibold hover:underline">
+                <CardDescription className="text-blackfont-semibold hover:underline ">
                   <a href={track.uri}>Listen on Spotify</a>
                 </CardDescription>
                 </CardContent>

@@ -51,7 +51,7 @@ export default function ArtistPage() {
         <h2 className="text-white font-bold text-5xl">{artist.name}</h2>
       </section>
       <h3 className="text-white font-bold text-3xl m-4">Top Songs</h3>
-      <section className="rounded-md border-4 border-black bg-colors-customYellow m-2 p-4 w-3/4 self-center">
+      <section className="rounded-md border-4 border-black dark:border-colors-customPink-dark bg-colors-customYellow-light dark:bg-colors-customYellow-dark m-2 p-4 w-3/4 self-center">
         <ul>
           {topTracks.length > 0 ? (
             topTracks.map((track) => (
