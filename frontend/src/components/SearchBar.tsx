@@ -83,15 +83,15 @@ export default function SearchBar() {
 
       {searchTerm && (
         <div className="p-2 flex align-middle justify-center flex-col md:flex-row lg:flex-row">
-          <div className="rounded-md border-4 border-black bg-colors-customYellow m-4 p-4 sm:w-full md:w-1/2 lg:w-1/3 h-[100%] overflow-y-auto">
-            <h2 className="text-4xl font-bold mb-4 bg-colors-customYellow">
+          <div className="rounded-md border-4 border-black bg-colors-customYellow-light dark:bg-colors-customYellow-dark m-4 p-4 sm:w-full md:w-1/2 lg:w-1/3 h-[100%] overflow-y-auto">
+            <h2 className="text-4xl font-bold mb-4 bg-colors-customYellow-light dark:bg-colors-customYellow-dark">
               Search Results: Artists
             </h2>
             <ArtistList artists={formattedArtists} />
           </div>
 
-          <div className="rounded-md border-4 border-black bg-colors-customGreen m-4 p-4 sm:w-full md:w-1/2 lg:w-1/3 h-[100%] overflow-y-auto">
-            <h2 className="text-4xl font-bold mb-4 bg-colors-customGreen">
+          <div className="rounded-md border-4 border-black bg-colors-customGreen-light dark:bg-colors-customYellow-dark m-4 p-4 sm:w-full md:w-1/2 lg:w-1/3 h-[100%] overflow-y-auto">
+            <h2 className="text-4xl font-bold mb-4 bg-colors-customGreen-light dark:bg-colors-customYellow-dark">
               Search Results: Songs
             </h2>
             <SongList songs={formattedSongs} />

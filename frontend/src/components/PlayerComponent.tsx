@@ -123,38 +123,39 @@ const PlayerComponent = () => {
         items-stretch 
         gap-3 
         self-center
-        bg-colors-customYellow-light
+        bg-colors-customGreen-light
         dark:bg-colors-customYellow-dark 
         border-4
-        border-black 
+        border-black
+        dark:border-white 
         rounded-md 
         p-4 
-        w-3/4 
+        w-full
         sm:items-center 
         lg:flex-row 
         md:flex-row 
-        sm:w-1/2 
-        sm:flex-col"
+        sm:flex-col
+        flex-col"
         >
           <img
             src={currentTrack.album.images[0]?.url}
             alt="Album Cover"
-            className="rounded-md border-4 border-black w-1/3 self-center object-cover"
+            className="rounded-md border-4  border-black w-44 self-center object-cover"
           />
-          <div className="rounded-md border-4 border-black w-2/3 p-4 bg-colors-customPink-light dark:bg-colors-customPink-dark text-left">
-            <h2 className="text-3xl text-strong">{currentTrack.name}</h2>
-            <h3 className="text-2xl">
+          <div className="rounded-md border-4 border-black dark:border-colors-customGreen-dark w-full p-4 bg-colors-customPink-light dark:bg-colors-customPink-dark text-left flex-row">
+            <h2 className="text-xl text-strong">{currentTrack.name}</h2>
+            <h3 className="text-xl">
               {currentTrack.artists.map((artist) => artist.name).join(", ")}
             </h3>
             <p>{currentTrack.album.name}</p>
-            <Slider
+            {/* <Slider
               min={0}
               max={currentTrack.duration_ms}
               defaultValue={[1]}
               step={1}
               className="w-full"
               aria-label="Volume"
-            />
+            /> */}
             {/*
             <div className="flex items-center space-x-2">
               <label
@@ -176,14 +177,14 @@ const PlayerComponent = () => {
               <span className="text-sm text-gray-500">{value}</span>
             </div>
             */}
-            <div className="flex gap-3 justify-center">
-              <PreviousButton onClick={() => player?.previousTrack()} />
+            <div className="flex gap-3 justify-center bg-colors-customGreen-light dark:bg-colors-customGreen-dark hover:bg-colors-customBlue-light dark:hover:bg-colors-customPink-dark w-11 rounded-full">
+              {/* <PreviousButton onClick={() => player?.previousTrack()} /> */}
               {isPlaying ? (
                 <PauseButton onClick={() => handlePlayPause()} />
               ) : (
                 <PlayButton onClick={() => handlePlayPause()} />
               )}
-              <NextButton onClick={() => player?.nextTrack()} />
+              {/* <NextButton onClick={() => player?.nextTrack()} /> */}
             </div>
           </div>
         </div>

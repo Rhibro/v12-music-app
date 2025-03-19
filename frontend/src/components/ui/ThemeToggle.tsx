@@ -16,9 +16,19 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={() => setDarkMode(!darkMode)}
-      className="p-2 border-4 border-black dark:border-white rounded-md bg-colors-customGreen-light hover:bg-colors-customGreen-dark dark:bg-colors-customYellow-dark font-semibold"
+      className="
+      p-2 
+      m-1 
+      border-4 
+      border-black 
+      dark:border-white 
+      rounded-md 
+      bg-colors-customGreen-dark 
+      hover:bg-colors-customBlue-dark 
+      dark:bg-colors-customBlue-light 
+      dark:hover:bg-colors-customGreen-light"
     >
-      {darkMode ? "Pop Mode" : "Goth Mode"}
+      {darkMode ? "🍭" : "💀"}
     </button>
   );
 }

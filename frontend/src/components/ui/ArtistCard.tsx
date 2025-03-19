@@ -39,7 +39,7 @@ const ArtistCard: FC<Props> = ({ artist, handlePlayTrack }) => {
     <section className="max-w-4xl m-auto sm:m-1 md:m-1 lg:m-auto">
       <Card className="rounded-md border-4 border-black dark:border-colors-customPink-dark bg-colors-customYellow-light dark:bg-colors-customYellow-dark">
       <CardContent className="flex justify-center ">
-          <img src={artist.image} alt="artist image" className="rounded-full border-4 border-black w-96 h-96 mt-8"/>
+          <img src={artist.image} alt="artist image" className="rounded-full border-4 border-black lg:h-96 lg:w-96 md:h-96 md:w-96 sm:h-9 sm:w-9 mt-8"/>
         </CardContent>
         <CardHeader>
           <CardTitle className="text-6xl font-bold">{artist.name}</CardTitle>

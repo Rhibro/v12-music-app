@@ -26,7 +26,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="p-3 flex justify-between align-middle ml-10 mr-10">
+    <header className="p-3 flex justify-between align-middle ml-1 mr-1">
       <h1 className="text-white text-left text-5xl">
         <NavLink
           to="/"
@@ -36,10 +36,10 @@ const Header: React.FC = () => {
           <span className="text-colors-customPink-light dark:text-colors-customPink-dark">.</span>
         </NavLink>
       </h1>
-      <section className=" flex justify-evenly w-56">
+      <section className=" flex justify-around ">
       {!isModalOpen && accessToken && (
         <button
-          className="border-4 border-black bg-white hover:opacity-80 text-black py-1.5 px-3 rounded-md transition-opacity duration-200 ease-in-out"
+          className="border-4 border-black bg-white hover:opacity-80 text-black py-1.5 px-3 m-1 rounded-md transition-opacity duration-200 ease-in-out"
           onClick={handleLogout}
         >
           Log out
