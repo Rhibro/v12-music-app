@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
+// light mode is default
 
 export default function ThemeToggle() {
-  const [darkMode, setDarkMode] = useState(
+  const [darkMode, setDarkMode] = useState( 
     document.documentElement.classList.contains("dark")
   );
 
-  useEffect(() => {
+  useEffect(() => { 
     if (darkMode) {
       document.documentElement.classList.add("dark");
     } else {
@@ -16,7 +17,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={() => setDarkMode(!darkMode)}
-      title="change theme"
+      title="change theme" //if you hover over the button it will show you this message
       className="
       p-2 
       m-1 
