@@ -31,6 +31,7 @@ const Header: React.FC = () => {
         <NavLink
           to="/"
           className="cursor-pointer hover:text-colors-customGreen-light dark:hover:text-colors-customGreen-dark transition-opacity duration-200 ease-in-out"
+          title="Home"
         >
           dara
           <span className="text-colors-customPink-light dark:text-colors-customPink-dark">.</span>
@@ -39,7 +40,7 @@ const Header: React.FC = () => {
       <section className=" flex justify-around ">
       {!isModalOpen && accessToken && (
         <button
-          className="border-4 border-black bg-white hover:opacity-80 text-black py-1.5 px-3 m-1 rounded-md transition-opacity duration-200 ease-in-out"
+          className="border-4 border-black font-semibold bg-white hover:bg-red-500 text-black py-1.5 px-3 m-1 rounded-md transition-opacity duration-200 ease-in-out"
           onClick={handleLogout}
         >
           Log out

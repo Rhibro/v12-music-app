@@ -77,7 +77,7 @@ export default function SearchBar() {
           placeholder="Search..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="placeholder:text-white text-white mt-5 w-full sm:w-full md:w-[calc(100%-2rem)] lg:w-[calc(66.67%-2rem)]"
+          className="placeholder:text-white text-white rounded-md hover:border-4 border-white mt-5 w-full sm:w-full md:w-[calc(100%-2rem)] lg:w-[calc(66.67%-2rem)]"
         />
       </div>
 

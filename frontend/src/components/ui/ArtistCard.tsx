@@ -50,7 +50,7 @@ const ArtistCard: FC<Props> = ({ artist, handlePlayTrack }) => {
         </CardContent> */}
 
         <CardContent>
-          <article className="flex flex-col gap-3 justify-center items-center">
+          <article className="flex flex-col gap-3 justify-center items-center  overflow-y-auto">
             {artist.topTracks.map((track) => (
               <Card
                 onClick={() => {

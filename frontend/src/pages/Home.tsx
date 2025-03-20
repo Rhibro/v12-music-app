@@ -29,7 +29,7 @@ export default function Home() {
     <div>
       {code || token ? (
         <div>
-          <h1 className="text-4xl text-white">
+          <h1 className="text-4xl text-white m-1">
             Search for a song or an artist
           </h1>
           <SearchBar />

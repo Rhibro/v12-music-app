@@ -16,6 +16,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={() => setDarkMode(!darkMode)}
+      title="change theme"
       className="
       p-2 
       m-1 

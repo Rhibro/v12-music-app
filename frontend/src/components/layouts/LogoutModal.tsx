@@ -16,18 +16,18 @@ const LogoutModal: React.FC<LogoutModalProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed top-3 right-12 flex items-center justify-center z-50">
+    <div className="fixed top-4 right-20 flex items-center justify-center z-50">
       <div className="">
         <div className="flex flex-col-reverse md:flex-row justify-center gap-2">
           <button
             onClick={onConfirm}
-            className="border-4 border-black bg-red-500 hover:opacity-80 text-black py-1.5 px-3 rounded-md transition-opacity duration-200 ease-in-out"
+            className="font-semibold border-4 border-black bg-red-500 hover:bg-red-900 text-black hover:text-white py-1.5 px-3 rounded-md transition-opacity duration-200 ease-in-out"
           >
             Logout
           </button>
           <button
             onClick={onCancel}
-            className="border-4 border-black bg-white hover:opacity-80 text-black py-1.5 px-3 rounded-md transition-opacity duration-200 ease-in-out"
+            className="font-semibold border-4 border-black bg-white hover:bg-black text-black hover:text-white py-1.5 px-3 rounded-md transition-opacity duration-200 ease-in-out"
           >
             Cancel
           </button>

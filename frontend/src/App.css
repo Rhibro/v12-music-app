@@ -52,6 +52,7 @@ body {
   background: #EE36C5;
   border-radius: 5px;
   border: solid black 3px;
+  cursor: pointer;
 }
 
 /* Handle on hover */
@@ -67,6 +68,7 @@ body {
 .dark ::-webkit-scrollbar-thumb {
   background: #505050; /* A purple shade */
   border: solid rgb(0, 0, 0) 3px;
+  cursor: pointer;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
