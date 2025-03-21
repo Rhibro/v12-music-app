@@ -58,12 +58,28 @@ export default function UserData() {
   }, [accessToken]);
 
   return (
-    <div className="flex lg:flex-row md:flex-row sm:flex-col flex-col">
+    <div className="flex align-middle justify-center lg:flex-row md:flex-row sm:flex-col flex-col">
   
-     <div className="rounded-md border-4 border-black dark:border-colors-customPink-dark bg-colors-customYellow-light dark:bg-colors-customYellow-dark m-4 p-4 lg:w-1/2 md:w-1/2 sm:w-full">
+     <div className="
+      rounded-md 
+      border-4 
+      border-black 
+      dark:border-colors-customPink-dark 
+      bg-colors-customYellow-light 
+      dark:bg-colors-customYellow-dark 
+      m-4 p-4 
+      lg:w-1/3 md:w-1/2 sm:w-full">
         {devices.length > 0 && <DeviceUsageChart devices={devices} />}
      </div>  
-     <div className="rounded-md border-4 border-black dark:border-colors-customPink-dark bg-colors-customYellow-light dark:bg-colors-customYellow-dark m-4 p-4 lg:w-1/2 md:w-1/2 sm:w-full">
+     <div className="
+      rounded-md 
+      border-4 
+      border-black 
+      dark:border-colors-customPink-dark 
+      bg-colors-customYellow-light 
+      dark:bg-colors-customYellow-dark 
+      m-4 p-4 
+      lg:w-1/3 md:w-1/2 sm:w-full">
         {Object.keys(genres).length > 0 && <GenreChart genres={genres} />}
      </div> 
      

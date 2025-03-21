@@ -36,12 +36,14 @@ export default function GenreChart({ genres }: GenreChartProps) {
         label: "Top Genres",
         data: Object.values(genres),
         backgroundColor: isDarkMode ? darkModeColors : lightModeColors,
+        borderColor: isDarkMode ? "white" : "black", // White border in dark mode, black in light mode
+        borderWidth: 3,
       },
     ],
   };
 
   return (
-    <div className="p-4 bg-white dark:bg-gray-800 rounded-md shadow-md">
+    <div className="p-4 bg-colors-customYellow-light dark:bg-gray-900 rounded-md ">
       <h3 className="text-4xl font-semibold mb-3 dark:text-white">Top Genres</h3>
       <Pie data={chartData} />
     </div>

@@ -45,12 +45,14 @@ export default function DeviceUsageChart({ devices }: DeviceUsageChartProps) {
         label: "Usage",
         data: Object.values(deviceCount),
         backgroundColor: isDarkMode ? darkModeColors : lightModeColors,
+        borderColor: isDarkMode ? "white" : "black", // White border in dark mode, black in light mode
+        borderWidth: 3,
       },
     ],
   };
 
   return (
-    <div className="p-4 bg-white dark:bg-gray-800 rounded-md shadow-md">
+    <div className="p-4 bg-colors-customYellow-light dark:bg-gray-900 rounded-md">
       <h3 className="text-4xl dark:text-white font-semibold mb-3">Device Usage</h3>
       <Pie data={chartData} />
     </div>
