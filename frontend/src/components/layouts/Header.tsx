@@ -47,6 +47,13 @@ const Header: React.FC = () => {
         </button>
       )}
 
+      <NavLink 
+      to="/userdata"
+      className="cursor-pointer py-2 px-3 border-4 border-black font-semibold bg-colors-customYellow-light hover:bg-colors-customPink-light dark:border-white dark:bg-colors-customYellow-dark dark:hover:bg-colors-customPink-dark text-black dark:text-white m-1 rounded-md duration-200 ease-in-out"
+      >
+        User Data
+      </NavLink>
+
       <LogoutModal
         isOpen={isModalOpen}
         onConfirm={confirmLogout}

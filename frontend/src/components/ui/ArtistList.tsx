@@ -18,7 +18,7 @@ export default function ArtistList({ artists }: ArtistListProps) {
         artists.map((artist) => <ArtistItem key={artist.id} artist={artist} />) 
       ) : (
       <Link to="ArtistPage">
-        <p className="bg-colors-customPink-light dark:bg-colors-customPink-dark rounded-md border-4 border-black p-1">No artists found.</p>
+        <p className="bg-colors-customPink-light dark:bg-colors-customPink-dark rounded-md border-4 border-black p-4">No artists found.</p>
       </Link>
       )}
     </ul>

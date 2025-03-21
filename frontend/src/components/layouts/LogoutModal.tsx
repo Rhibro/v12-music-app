@@ -16,7 +16,7 @@ const LogoutModal: React.FC<LogoutModalProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed top-4 right-20 flex items-center justify-center z-50">
+    <div className="fixed top-20 right-20 flex items-center justify-center z-50">
       <div className="">
         <div className="flex flex-col-reverse md:flex-row justify-center gap-2">
           <button
