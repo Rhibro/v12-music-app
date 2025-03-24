@@ -2,15 +2,21 @@ import { useEffect, useState } from "react";
 // light mode is default
 
 export default function ThemeToggle() {
-  const [darkMode, setDarkMode] = useState( 
-    document.documentElement.classList.contains("dark")
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem('theme') === 'dark' ||
+    (!localStorage.getItem('theme') && 
+      window.matchMedia('(prefers-colcour-scheme: dark)').matches);
+  } 
+    // document.documentElement.classList.contains("dark")
   );
 
   useEffect(() => { 
     if (darkMode) {
       document.documentElement.classList.add("dark");
+      localStorage.setItem('theme', 'dark');
     } else {
       document.documentElement.classList.remove("dark");
+      localStorage.setItem('theme', 'light');
     }
   }, [darkMode]);
 
