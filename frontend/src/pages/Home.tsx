@@ -1,9 +1,9 @@
-import ListContainer from "@/components/ui/listContainer";
+import ListContainer from "@/components/ui/topArtistDisplay/listContainer";
 import SearchBar from "@/components/SearchBar";
 import Login from "./Login";
 import useAccessStore from "@/store/store";
 import useAuth from "@/helpers/useAuth";
-import SongListContainer from "@/components/ui/SongListContainer";
+import SongListContainer from "@/components/ui/topSongDisplay/SongListContainer";
 import { useEffect } from "react";
 // import PlayerComponent from "@/components/PlayerComponent";
 

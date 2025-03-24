@@ -1,4 +1,4 @@
-import SongItem from "../ui/SongItem"
+import SongItem from "./SongItem"
 
 interface Song {
   id: string;

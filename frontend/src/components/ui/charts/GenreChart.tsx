@@ -27,7 +27,7 @@ export default function GenreChart({ genres }: GenreChartProps) {
     }, []);
   
     const lightModeColors = ["#36EE5F", "#EE36C5", "#3669EE", "#36EE5F", "#9966ff", "#ff9f40"];
-    const darkModeColors = ["#414141", "#000000", "#363636", "#1c1c1c", "#8A2BE2", "#FFD700"];
+    const darkModeColors = ["#414141", "#000000", "#1e1e1e", "#2f2f2f", "#a8a8a8", "#898989"];
 
   const chartData = {
     labels: Object.keys(genres),
@@ -43,7 +43,7 @@ export default function GenreChart({ genres }: GenreChartProps) {
   };
 
   return (
-    <div className="p-4 bg-colors-customYellow-light dark:bg-gray-900 rounded-md ">
+    <div className="p-4 bg-colors-customYellow-light dark:bg-colors-customYellow-dark rounded-md ">
       <h3 className="text-4xl font-semibold mb-3 dark:text-white">Top Genres</h3>
       <Pie data={chartData} />
     </div>

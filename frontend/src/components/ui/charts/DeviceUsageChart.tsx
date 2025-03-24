@@ -52,7 +52,7 @@ export default function DeviceUsageChart({ devices }: DeviceUsageChartProps) {
   };
 
   return (
-    <div className="p-4 bg-colors-customYellow-light dark:bg-gray-900 rounded-md">
+    <div className="p-4 bg-colors-customYellow-light dark:bg-colors-customYellow-dark  rounded-md">
       <h3 className="text-4xl dark:text-white font-semibold mb-3">Device Usage</h3>
       <Pie data={chartData} />
     </div>

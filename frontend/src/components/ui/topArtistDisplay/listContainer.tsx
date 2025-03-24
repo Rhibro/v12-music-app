@@ -1,6 +1,6 @@
 import useAccessStore from "@/store/store";
 import axios from "axios";
-import ArtistList from "./ArtistList";
+import ArtistList from "@/components/ui/topArtistDisplay/ArtistList";
 import { useState, useEffect } from "react";
 
 interface Artist {

@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { Input } from "./ui/input";
 import searchSpotify from "../helpers/searchSpotify";
 import useAccessStore from "@/store/store";
-import SongList from "./ui/SongList";
-import ArtistList from "./ui/ArtistList";
+import SongList from "./ui/topSongDisplay/SongList";
+import ArtistList from "./ui/topArtistDisplay/ArtistList";
 
 interface SpotifyTrack {
   id: string;
