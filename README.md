@@ -1,7 +1,18 @@
 # v12-music-app
 
-This is an application which uses the Spotify API to fetch the users Top Artists, and Top Tracks. It allows you to search Spotify to find songs and artists and has a built in player component at the bottom of each page. 
-I have focused on making this application as accessible as possible by adding clear interactivity, as well as a colour and dark mode. 
+This is an application which uses the Spotify API to fetch the users Top Artists, and Top Tracks. It allows you to search Spotify to find songs and artists and has a built in player component. 
+
+## Changes
+I have focused on making this application as accessible as possible by adding clear interactivity, a light and dark mode, title attributes, and a user data page
+
+the changes I have made from the group project include: 
+  - dark and light theme (with local storage to save the theme when the page reloads)
+  - hover effect on all interactive components
+  - User Data page where graphs are displayed showing the user's device usage and genre preferences
+  - changed the layout of the Artist page to a list so it is more similar to the home page
+  - made the whole application responsive
+  - added the title attribute to the logo element and the theme button to make it clear to the user what purpose they serve
+ 
 
 ### Home Page
 Once a user has signed-in they are taken to the Home Page where two lists appear 'Top Artists' & 'Top Tracks'
