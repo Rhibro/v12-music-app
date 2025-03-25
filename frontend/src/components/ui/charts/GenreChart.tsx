@@ -9,9 +9,9 @@ interface GenreChartProps {
   genres: Record<string, number>; // Key: Genre, Value: Count
 }
 
-export default function GenreChart({ genres }: GenreChartProps) {
+export default function GenreChart({ genres }: GenreChartProps) { // component that receives genres as a prop
 
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(false); // state variable keeps track of whether dark mode is enabled
 
     // Check for dark mode on mount
     useEffect(() => {
@@ -29,7 +29,7 @@ export default function GenreChart({ genres }: GenreChartProps) {
     const lightModeColors = ["#36EE5F", "#EE36C5", "#3669EE", "#36EE5F", "#9966ff", "#ff9f40"];
     const darkModeColors = ["#414141", "#000000", "#1e1e1e", "#2f2f2f", "#a8a8a8", "#898989"];
 
-  const chartData = {
+  const chartData = { // chart data and styles
     labels: Object.keys(genres),
     datasets: [
       {
@@ -42,6 +42,7 @@ export default function GenreChart({ genres }: GenreChartProps) {
     ],
   };
 
+  // rendering the pie chart
   return (
     <div className="p-4 bg-colors-customYellow-light dark:bg-colors-customYellow-dark rounded-md ">
       <h3 className="text-4xl font-semibold mb-3 dark:text-white">Top Genres</h3>
@@ -49,3 +50,9 @@ export default function GenreChart({ genres }: GenreChartProps) {
     </div>
   );
 }
+
+// Key Features
+
+// Dynamic Theme Support: Automatically adapts to dark/light mode.
+// Reactive Chart: Updates when genres prop changes.
+// Performance Optimization: Uses MutationObserver to detect theme changes efficiently.

@@ -25,10 +25,10 @@ export default function PodcastSongChart({ data }: PodcastSongChartProps) {
     return () => observer.disconnect();
   }, []);
 
-  const lightModeColors = ["#3669EE", "#EE36C5"]; // Songs (Blue) / Podcasts (Red)
-  const darkModeColors = ["#1c1c1c", "#000000"]; // Dark Mode Colors
+  const lightModeColors = ["#3669EE", "#EE36C5"]; // Songs (Blue) / Podcasts (Pink)
+  const darkModeColors = ["#1c1c1c", "#000000"]; // Dark Mode Colours
 
-  const chartData = {
+  const chartData = { // chart data and styles
     labels: Object.keys(data),
     datasets: [
       {

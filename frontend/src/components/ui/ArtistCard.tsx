@@ -69,9 +69,9 @@ const ArtistCard: FC<Props> = ({ artist, handlePlayTrack }) => {
                   <CardDescription className="text-black dark:text-white font-semibold">
                     Album: {track.album.name}
                   </CardDescription>
-                <CardDescription className="text-blackfont-semibold hover:underline ">
+                {/* <CardDescription className="text-blackfont-semibold hover:underline ">
                   <a href={track.uri}>Listen on Spotify</a>
-                </CardDescription>
+                </CardDescription> */}
                 </CardContent>
               </Card>
             ))}
