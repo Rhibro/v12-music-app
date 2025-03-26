@@ -2,14 +2,19 @@ import { useEffect, useState } from "react";
 // light mode is default
 
 export default function ThemeToggle() {
-  const [darkMode, setDarkMode] = useState(() => {
+  // darkMode variable to determine if dark mode is active
+  const [darkMode, setDarkMode] = useState(() => { // a function to update darkMode
+
+    // checking if the theme is dark
     return localStorage.getItem('theme') === 'dark' ||
     (!localStorage.getItem('theme') && 
-      window.matchMedia('(prefers-colcour-scheme: dark)').matches);
+
+    // If there's no stored theme preference, it checks the system preference using the below line of code
+    window.matchMedia('(prefers-color-scheme: dark)').matches);
   } 
-    // document.documentElement.classList.contains("dark")
   );
 
+  // apply dark mode with useEffect
   useEffect(() => { 
     if (darkMode) {
       document.documentElement.classList.add("dark");
@@ -40,3 +45,11 @@ export default function ThemeToggle() {
     </button>
   );
 }
+
+//Summary of What This Component Does
+
+//Checks theme preference (localStorage or system setting).
+//Stores user preference and applies "dark" class to <html>.
+//Provides a toggle button with different styles for light/dark modes.
+//The theme is applied immediately 
+//The theme persists across page reloads
