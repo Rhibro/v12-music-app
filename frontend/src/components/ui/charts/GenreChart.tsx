@@ -33,9 +33,9 @@ export default function GenreChart({ genres }: GenreChartProps) { // component t
     labels: Object.keys(genres),
     datasets: [
       {
-        label: "Top Genres",
-        data: Object.values(genres),
-        backgroundColor: isDarkMode ? darkModeColors : lightModeColors,
+        label: "Top Genres", // genre names from genres object.
+        data: Object.values(genres), // genre counts from genres object.
+        backgroundColor: isDarkMode ? darkModeColors : lightModeColors, // styles based on if dark mode is or is not enabled
         borderColor: isDarkMode ? "white" : "black", // White border in dark mode, black in light mode
         borderWidth: 3,
       },

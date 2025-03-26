@@ -5,6 +5,9 @@ import useAccessStore from "@/store/store";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
+
+// data interfaces: define the expected structure of the data fetched from the Spotify API
+
 interface Artist {
   id: string;
   name: string;
@@ -23,10 +26,11 @@ interface Track {
 }
 
 export default function UserData() {
-  const [devices, setDevices] = useState<Device[]>([]);
-  const [genres, setGenres] = useState<Record<string, number>>({});
-  const [podcastSongData, setPodcastSongData] = useState<Record<string, number>>({});
+  const [devices, setDevices] = useState<Device[]>([]); // Stores a list of user devices.
+  const [genres, setGenres] = useState<Record<string, number>>({}); // Stores the count of different genres
+  const [podcastSongData, setPodcastSongData] = useState<Record<string, number>>({}); // Stores the number of top songs and podcasts
 
+  // Retrieves the user's Spotify access token (used for authorization)
   const accessToken = useAccessStore().accessToken;
 
   useEffect(() => {
@@ -39,7 +43,7 @@ export default function UserData() {
           { headers: { Authorization: `Bearer ${accessToken}` } }
         );
        
-        // 🎼 Fetch Top Artists for Genre Information
+        // Fetch Top Artists for Genre Information (5 top artists)
         const genreCount: Record<string, number> = {};
         artistResponse.data.items.forEach((artist) => {
           artist.genres.forEach((genre) => {
@@ -49,7 +53,7 @@ export default function UserData() {
         setGenres(genreCount);
 
 
-        // 📱 Fetch Device Usage
+        // Fetch Device Usage (where to user has played music)
         const deviceResponse = await axios.get<{ devices: Device[] }>(
           "https://api.spotify.com/v1/me/player/devices",
           { headers: { Authorization: `Bearer ${accessToken}` } }
@@ -57,7 +61,7 @@ export default function UserData() {
 
         setDevices(deviceResponse.data.devices);
 
-        // Fetch Podcasts and Songs
+        // Fetch Podcasts and Songs (top 10 songs, saved podcats)
         const tracksResponse = await axios.get<{ items: Track[] }>(
           "https://api.spotify.com/v1/me/top/tracks?limit=10",
           { headers: { Authorization: `Bearer ${accessToken}` } }
@@ -83,6 +87,7 @@ export default function UserData() {
     fetchData();
   }, [accessToken]);
 
+  // rendering
   return (
   
     <div className="flex align-middle justify-center items-center lg:flex-row  md:flex-col sm:flex-col flex-col">
@@ -127,3 +132,20 @@ export default function UserData() {
 
   );
 }
+
+// Summary
+// Fetches:
+// Top Artists → Genres
+// Devices → Listening Platforms
+// Top Tracks & Podcasts → Content Type Distribution
+
+// Displays:
+// Device Usage Chart
+// Genre Chart
+// Podcast vs. Song Chart
+
+// Features:
+// Dark Mode Support
+// Responsive Layout
+
+// This component provides a quick overview of the user's listening habits with Spotify data visualized in charts. 
