@@ -224,10 +224,4 @@ After authentication, the search interface is displayed
 Search results update automatically as the user types
 The user can log out via the header menu
 
-### Development
-To further develop these components:
-
-Ensure necessary environment variables for the Spotify API are set
-Install dependencies using npm install
-Run the development server with npm run dev
 
