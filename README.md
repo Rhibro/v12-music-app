@@ -4,6 +4,11 @@
 
 This project is a Spotify data visualization app that retrieves user listening data and presents it through interactive charts and lists. It allows you to search Spotify to find songs and artists and has a built in player component. The UI adapts to both light and dark mode for an enhanced user experience.
 
+![Skärmbild 2025-03-27 140525](https://github.com/user-attachments/assets/25e52387-f602-49a2-89ba-c0768fc86139)
+![Skärmbild 2025-03-27 140039](https://github.com/user-attachments/assets/ad6dd40f-a11e-424c-84d3-87812dad20b1)
+![Skärmbild 2025-03-27 140247](https://github.com/user-attachments/assets/91688e61-a148-4baa-85b2-6e5c69f12295)
+![Skärmbild 2025-03-27 140226](https://github.com/user-attachments/assets/67595337-dcb6-474d-a918-b8e09620f54a)
+
 ## Changes
 I have focused on making this application as accessible as possible by adding clear interactivity, a light and dark mode, title attributes, and a user data page
 
