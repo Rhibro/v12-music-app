@@ -3,6 +3,10 @@
 This is an application which uses the Spotify API to fetch the users Top Artists, and Top Tracks. It allows you to search Spotify to find songs and artists and has a built in player component at the bottom of each page. 
 I have focused on making this application as accessible as possible by adding clear interactivity, as well as a colour and dark mode. 
 
+![Skärmbild 2025-03-20 101215](https://github.com/user-attachments/assets/fea081df-8ff9-484e-9e5b-6e15e2cf7a3c)
+
+![Skärmbild 2025-03-27 140039](https://github.com/user-attachments/assets/04559ff7-1135-4cfa-8d69-3eacecfb3c8a)
+
 ### Home Page
 Once a user has signed-in they are taken to the Home Page where two lists appear 'Top Artists' & 'Top Tracks'
 
